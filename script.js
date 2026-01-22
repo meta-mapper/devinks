@@ -384,9 +384,14 @@ if (filterBtns.length > 0 && galleryItems.length > 0) {
 
                 if (filter === 'all' || category === filter) {
                     item.classList.remove('hidden');
+                    item.style.opacity = '1';
+                    item.style.animation = 'none';
+                    // Trigger reflow to restart animation
+                    void item.offsetWidth;
                     item.style.animation = 'fadeIn 0.5s ease forwards';
                 } else {
                     item.classList.add('hidden');
+                    item.style.animation = 'none';
                 }
             });
         });
