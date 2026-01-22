@@ -223,7 +223,7 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observe elements for animation
-document.querySelectorAll('.service-card, .process-step, .testimonial-card, .pricing-card, .style-card, .artist-card, .location-card, .faq-item').forEach(el => {
+document.querySelectorAll('.service-card, .testimonial-card, .pricing-card, .style-card, .artist-card, .location-card, .faq-item, .gallery-item').forEach(el => {
     el.style.opacity = '0';
     observer.observe(el);
 });
@@ -308,6 +308,90 @@ document.addEventListener('DOMContentLoaded', () => {
 
     lazyImages.forEach(img => imageObserver.observe(img));
 });
+
+// ===== Journey Section Interactivity =====
+const journeySection = document.querySelector('.journey');
+const journeySteps = document.querySelectorAll('.journey-step');
+
+let currentStep = 1;
+let journeyInterval = null;
+
+function setActiveStep(stepNum) {
+    currentStep = stepNum;
+    journeySteps.forEach(step => {
+        const num = parseInt(step.getAttribute('data-step'));
+        step.classList.toggle('active', num === stepNum);
+    });
+}
+
+function nextStep() {
+    let next = currentStep + 1;
+    if (next > journeySteps.length) next = 1;
+    setActiveStep(next);
+}
+
+// Click handlers for steps
+journeySteps.forEach(step => {
+    step.addEventListener('click', () => {
+        const stepNum = parseInt(step.getAttribute('data-step'));
+        setActiveStep(stepNum);
+        if (journeyInterval) {
+            clearInterval(journeyInterval);
+            journeyInterval = setInterval(nextStep, 3000);
+        }
+    });
+});
+
+// Animate timeline and auto-cycle when in view
+if (journeySection) {
+    const journeyObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                journeySection.classList.add('animated');
+                setActiveStep(1);
+                if (!journeyInterval) {
+                    journeyInterval = setInterval(nextStep, 3000);
+                }
+            } else {
+                if (journeyInterval) {
+                    clearInterval(journeyInterval);
+                    journeyInterval = null;
+                }
+            }
+        });
+    }, { threshold: 0.3 });
+
+    journeyObserver.observe(journeySection);
+}
+
+// ===== Gallery Filter =====
+const filterBtns = document.querySelectorAll('.filter-btn');
+const galleryItems = document.querySelectorAll('.gallery-item');
+
+if (filterBtns.length > 0 && galleryItems.length > 0) {
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            // Update active button
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            // Get filter value
+            const filter = btn.getAttribute('data-filter');
+
+            // Filter gallery items
+            galleryItems.forEach(item => {
+                const category = item.getAttribute('data-category');
+
+                if (filter === 'all' || category === filter) {
+                    item.classList.remove('hidden');
+                    item.style.animation = 'fadeIn 0.5s ease forwards';
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+        });
+    });
+}
 
 // ===== Initialize =====
 document.addEventListener('DOMContentLoaded', () => {

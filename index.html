@@ -207,11 +207,61 @@
                 </div>
                 <div class="about-image">
                     <div class="image-frame">
-                        <div class="about-img-placeholder">Studio Image</div>
+                        <img src="assets/images/studio.jpg" alt="Dev Inks Tattoo Studio Interior" class="studio-img">
                     </div>
                     <div class="experience-badge">
                         <span class="exp-number">5+</span>
                         <span class="exp-text">Years of<br>Excellence</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Artist Section -->
+    <section id="artists" class="artists">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Meet The Artist</span>
+                <h2 class="section-title">The Man Behind <span class="highlight">The Ink</span></h2>
+            </div>
+            <div class="artist-featured">
+                <div class="artist-featured-image">
+                    <img src="assets/images/nitin.jpeg" alt="Nitin Devlal - Founder & Lead Artist" class="artist-photo">
+                    <div class="artist-stats-badge">
+                        <div class="stat">
+                            <span class="stat-num">84K+</span>
+                            <span class="stat-txt">Followers</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="artist-featured-content">
+                    <div class="artist-name-block">
+                        <h3>Nitin Devlal</h3>
+                        <span class="artist-title">Founder & Lead Tattoo Artist</span>
+                    </div>
+                    <p class="artist-description">
+                        With over 5 years of dedicated experience in the art of tattooing, Nitin has transformed his passion into Dev Inks Tattoo Factory. His journey began with a simple belief: everyone deserves a tattoo experience that's comfortable, transparent, and truly personal.
+                    </p>
+                    <p class="artist-description">
+                        Specializing in realism, portraits, and custom designs, Nitin approaches each piece as a collaboration between artist and client. His work has earned him a loyal community of 84K+ followers on Instagram, built through consistent quality and genuine connections.
+                    </p>
+                    <div class="artist-details">
+                        <div class="detail-block">
+                            <h4>Philosophy</h4>
+                            <p class="philosophy-text">"Your body, your art. I'm here to listen, guide, and create something meaningful that you'll carry with pride."</p>
+                        </div>
+                    </div>
+                    <div class="artist-actions">
+                        <a href="https://www.instagram.com/devinks_tattoo_factory" target="_blank" class="btn btn-primary">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                            </svg>
+                            View Portfolio
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">Book a Session</a>
                     </div>
                 </div>
             </div>
@@ -325,56 +375,6 @@
         </div>
     </section>
 
-    <!-- Artist Section -->
-    <section id="artists" class="artists">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Meet The Artist</span>
-                <h2 class="section-title">The Man Behind <span class="highlight">The Ink</span></h2>
-            </div>
-            <div class="artist-featured">
-                <div class="artist-featured-image">
-                    <img src="assets/images/nitin.jpeg" alt="Nitin Devlal - Founder & Lead Artist" class="artist-photo">
-                    <div class="artist-stats-badge">
-                        <div class="stat">
-                            <span class="stat-num">84K+</span>
-                            <span class="stat-txt">Followers</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="artist-featured-content">
-                    <div class="artist-name-block">
-                        <h3>Nitin Devlal</h3>
-                        <span class="artist-title">Founder & Lead Tattoo Artist</span>
-                    </div>
-                    <p class="artist-description">
-                        With over 5 years of dedicated experience in the art of tattooing, Nitin has transformed his passion into Dev Inks Tattoo Factory. His journey began with a simple belief: everyone deserves a tattoo experience that's comfortable, transparent, and truly personal.
-                    </p>
-                    <p class="artist-description">
-                        Specializing in realism, portraits, and custom designs, Nitin approaches each piece as a collaboration between artist and client. His work has earned him a loyal community of 84K+ followers on Instagram, built through consistent quality and genuine connections.
-                    </p>
-                    <div class="artist-details">
-                        <div class="detail-block">
-                            <h4>Philosophy</h4>
-                            <p class="philosophy-text">"Your body, your art. I'm here to listen, guide, and create something meaningful that you'll carry with pride."</p>
-                        </div>
-                    </div>
-                    <div class="artist-actions">
-                        <a href="https://www.instagram.com/devinks_tattoo_factory" target="_blank" class="btn btn-primary">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
-                            </svg>
-                            View Portfolio
-                        </a>
-                        <a href="#contact" class="btn btn-secondary">Book a Session</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- Tattoo Styles Section -->
     <section id="styles" class="styles">
         <div class="mandala-bg"></div>
@@ -477,9 +477,107 @@
                 <h2 class="section-title">Our <span class="highlight">Work</span></h2>
                 <p class="section-subtitle">Browse through our collection of custom tattoo designs from our studio.</p>
             </div>
-            <div class="gallery-showcase">
-                <div class="gallery-showcase-placeholder">Portfolio Gallery</div>
+
+            <!-- Gallery Filter Tabs -->
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="realism">Realism</button>
+                <button class="filter-btn" data-filter="traditional">Traditional</button>
+                <button class="filter-btn" data-filter="geometric">Geometric</button>
+                <button class="filter-btn" data-filter="blackwork">Blackwork</button>
+                <button class="filter-btn" data-filter="fineline">Fine Line</button>
+                <button class="filter-btn" data-filter="minimalist">Minimalist</button>
+                <button class="filter-btn" data-filter="japanese">Japanese</button>
             </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid">
+                <div class="gallery-item" data-category="realism">
+                    <img src="assets/images/style-realism.jpg" alt="Realism Tattoo" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Realism</span>
+                        <h4>Portrait Work</h4>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="traditional">
+                    <img src="assets/images/style-traditional.jpg" alt="Traditional Tattoo" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Traditional</span>
+                        <h4>Classic American</h4>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="geometric">
+                    <img src="assets/images/style-geometric.jpg" alt="Geometric Tattoo" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Geometric</span>
+                        <h4>Sacred Patterns</h4>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="blackwork">
+                    <img src="assets/images/style-blackwork.jpg" alt="Blackwork Tattoo" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Blackwork</span>
+                        <h4>Bold Designs</h4>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="fineline">
+                    <img src="assets/images/style-fineline.jpg" alt="Fine Line Tattoo" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Fine Line</span>
+                        <h4>Delicate Art</h4>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="minimalist">
+                    <img src="assets/images/style-minimalist.jpg" alt="Minimalist Tattoo" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Minimalist</span>
+                        <h4>Simple Beauty</h4>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="japanese">
+                    <img src="assets/images/style-japanese.jpg" alt="Japanese Tattoo" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Japanese</span>
+                        <h4>Irezumi Style</h4>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="watercolor">
+                    <img src="assets/images/style-watercolor.jpg" alt="Watercolor Tattoo" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Watercolor</span>
+                        <h4>Painterly Art</h4>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="realism">
+                    <img src="assets/images/gallery-1.jpg" alt="Realism Tattoo Work" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Realism</span>
+                        <h4>Custom Portrait</h4>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="blackwork">
+                    <img src="assets/images/gallery-2.jpg" alt="Blackwork Tattoo Design" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Blackwork</span>
+                        <h4>Dark Art</h4>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="geometric">
+                    <img src="assets/images/gallery-3.jpg" alt="Geometric Pattern Tattoo" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Geometric</span>
+                        <h4>Mandala Design</h4>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="traditional">
+                    <img src="assets/images/gallery-4.jpg" alt="Traditional Sleeve" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-category">Traditional</span>
+                        <h4>Sleeve Work</h4>
+                    </div>
+                </div>
+            </div>
+
             <div class="gallery-instagram">
                 <div class="instagram-header">
                     <div class="instagram-info">
@@ -499,77 +597,156 @@
         </div>
     </section>
 
-    <!-- Process Section -->
-    <section class="process">
-        <div class="mandala-bg"></div>
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">Testimonials</span>
+                <h2 class="section-title">What Clients <span class="highlight">Say</span></h2>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <span>★★★★★</span>
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"As a first-timer, I was nervous but Nitin made me feel completely at ease. The process was explained clearly and the result exceeded my expectations! Highly recommend for anyone getting their first tattoo."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"></div>
+                        <div class="author-info">
+                            <h4>Priya S.</h4>
+                            <span>First Tattoo - Gurugram</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <span>★★★★★</span>
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"No attitude, no pressure, just amazing artistry. Dev Inks turned my concept into something I'll proudly wear forever. The attention to detail in my sleeve is incredible!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"></div>
+                        <div class="author-info">
+                            <h4>Rahul M.</h4>
+                            <span>Custom Sleeve - Gurugram</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <span>★★★★★</span>
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"The transparency in pricing and the attention to detail sets them apart. Got my cover-up done here and it's absolutely stunning. Best decision I made!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"></div>
+                        <div class="author-info">
+                            <h4>Ananya K.</h4>
+                            <span>Cover-up Work - Delhi</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">
+                        <span>★★★★★</span>
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"Traveled from Pithoragarh to their Gurugram studio and it was worth every kilometer. Professional, clean, and the portrait tattoo is exactly what I envisioned."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar"></div>
+                        <div class="author-info">
+                            <h4>Vikram T.</h4>
+                            <span>Portrait Tattoo - Uttarakhand</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process/Journey Section -->
+    <section class="journey" id="journey">
         <div class="container">
             <div class="section-header">
                 <span class="section-label">How It Works</span>
                 <h2 class="section-title">Your Tattoo <span class="highlight">Journey</span></h2>
                 <p class="section-subtitle">From idea to ink, we guide you through every step of the process.</p>
             </div>
-            <div class="process-timeline">
-                <div class="process-step">
-                    <div class="step-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-                        </svg>
-                    </div>
-                    <div class="step-number">01</div>
-                    <div class="step-content">
-                        <h3>Free Consultation</h3>
-                        <p>Share your ideas via WhatsApp, Instagram, or visit our studio. We'll discuss your vision, placement, size, and answer all your questions.</p>
-                    </div>
-                </div>
-                <div class="process-step">
-                    <div class="step-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
-                        </svg>
-                    </div>
-                    <div class="step-number">02</div>
-                    <div class="step-content">
-                        <h3>Custom Design</h3>
-                        <p>Our artists create a custom design based on your input. You'll see a preview and can request revisions until it's perfect.</p>
+
+            <!-- Horizontal Timeline -->
+            <div class="journey-timeline">
+                <div class="timeline-track"></div>
+
+                <div class="journey-step" data-step="1">
+                    <div class="step-dot"><span>1</span></div>
+                    <div class="step-card">
+                        <div class="step-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                            </svg>
+                        </div>
+                        <h3>Consultation</h3>
+                        <p>Share your ideas via WhatsApp or visit our studio</p>
                     </div>
                 </div>
-                <div class="process-step">
-                    <div class="step-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-                            <line x1="16" y1="2" x2="16" y2="6"/>
-                            <line x1="8" y1="2" x2="8" y2="6"/>
-                            <line x1="3" y1="10" x2="21" y2="10"/>
-                        </svg>
-                    </div>
-                    <div class="step-number">03</div>
-                    <div class="step-content">
-                        <h3>Book Your Session</h3>
-                        <p>Once approved, we'll schedule your session at a time that works for you. A deposit secures your appointment.</p>
+
+                <div class="journey-step" data-step="2">
+                    <div class="step-dot"><span>2</span></div>
+                    <div class="step-card">
+                        <div class="step-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+                            </svg>
+                        </div>
+                        <h3>Design</h3>
+                        <p>We create custom artwork with unlimited revisions</p>
                     </div>
                 </div>
-                <div class="process-step">
-                    <div class="step-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
-                        </svg>
-                    </div>
-                    <div class="step-number">04</div>
-                    <div class="step-content">
-                        <h3>Tattoo Session</h3>
-                        <p>Relax in our comfortable, hygienic studio as our artist brings your design to life with precision and care.</p>
+
+                <div class="journey-step" data-step="3">
+                    <div class="step-dot"><span>3</span></div>
+                    <div class="step-card">
+                        <div class="step-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
+                                <line x1="16" y1="2" x2="16" y2="6"/>
+                                <line x1="8" y1="2" x2="8" y2="6"/>
+                                <line x1="3" y1="10" x2="21" y2="10"/>
+                            </svg>
+                        </div>
+                        <h3>Book</h3>
+                        <p>Schedule your session at a convenient time</p>
                     </div>
                 </div>
-                <div class="process-step">
-                    <div class="step-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
-                        </svg>
+
+                <div class="journey-step" data-step="4">
+                    <div class="step-dot"><span>4</span></div>
+                    <div class="step-card">
+                        <div class="step-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                            </svg>
+                        </div>
+                        <h3>Ink Session</h3>
+                        <p>Relax while we bring your design to life</p>
                     </div>
-                    <div class="step-number">05</div>
-                    <div class="step-content">
-                        <h3>Aftercare Support</h3>
-                        <p>We provide detailed aftercare instructions and are always available for questions during your healing journey.</p>
+                </div>
+
+                <div class="journey-step" data-step="5">
+                    <div class="step-dot"><span>5</span></div>
+                    <div class="step-card">
+                        <div class="step-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                            </svg>
+                        </div>
+                        <h3>Aftercare</h3>
+                        <p>We support you through the healing process</p>
                     </div>
                 </div>
             </div>
@@ -725,78 +902,6 @@
                     </button>
                     <div class="faq-answer">
                         <p>We use hospital-grade sterilization, single-use needles and tubes, premium FDA-approved inks, and maintain strict hygiene protocols. Your safety is our top priority.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section class="testimonials">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-label">Testimonials</span>
-                <h2 class="section-title">What Clients <span class="highlight">Say</span></h2>
-            </div>
-            <div class="testimonials-slider">
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">
-                        <span>★★★★★</span>
-                    </div>
-                    <div class="testimonial-content">
-                        <p>"As a first-timer, I was nervous but Nitin made me feel completely at ease. The process was explained clearly and the result exceeded my expectations! Highly recommend for anyone getting their first tattoo."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar"></div>
-                        <div class="author-info">
-                            <h4>Priya S.</h4>
-                            <span>First Tattoo - Gurugram</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">
-                        <span>★★★★★</span>
-                    </div>
-                    <div class="testimonial-content">
-                        <p>"No attitude, no pressure, just amazing artistry. Dev Inks turned my concept into something I'll proudly wear forever. The attention to detail in my sleeve is incredible!"</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar"></div>
-                        <div class="author-info">
-                            <h4>Rahul M.</h4>
-                            <span>Custom Sleeve - Gurugram</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">
-                        <span>★★★★★</span>
-                    </div>
-                    <div class="testimonial-content">
-                        <p>"The transparency in pricing and the attention to detail sets them apart. Got my cover-up done here and it's absolutely stunning. Best decision I made!"</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar"></div>
-                        <div class="author-info">
-                            <h4>Ananya K.</h4>
-                            <span>Cover-up Work - Delhi</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">
-                        <span>★★★★★</span>
-                    </div>
-                    <div class="testimonial-content">
-                        <p>"Traveled from Pithoragarh to their Gurugram studio and it was worth every kilometer. Professional, clean, and the portrait tattoo is exactly what I envisioned."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <div class="author-avatar"></div>
-                        <div class="author-info">
-                            <h4>Vikram T.</h4>
-                            <span>Portrait Tattoo - Uttarakhand</span>
-                        </div>
                     </div>
                 </div>
             </div>
