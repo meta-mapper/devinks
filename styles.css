@@ -1641,7 +1641,7 @@ section {
 .journey-timeline {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: stretch;
     position: relative;
     padding-top: 30px;
 }
@@ -1683,6 +1683,7 @@ section {
     position: relative;
     z-index: 2;
     padding: 0 10px;
+    align-self: stretch;
 }
 
 /* Step Dot */
@@ -1732,6 +1733,10 @@ section {
     border: 1px solid transparent;
     transition: all 0.4s ease;
     max-width: 180px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 140px;
 }
 
 .journey-step:hover .step-card {
